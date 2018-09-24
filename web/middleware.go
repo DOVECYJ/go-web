@@ -167,7 +167,7 @@ func BasicAuth(h handler, user, password string) handler {
 		if !ok {
 			//TODO:
 			//弹出密码框
-			c.w.WriteHeader(403)
+			c.w.WriteHeader(401)
 			return
 		}
 		if !checkauth(user, password, u, p) {
